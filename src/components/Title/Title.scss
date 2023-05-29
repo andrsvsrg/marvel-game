@@ -1,0 +1,15 @@
+@use '../../helpers/variables';
+@font-face {
+  font-family: 'Avengeance';
+  src: url('../../fonts/avengeance/AvengeanceHeroicAvengerNormal-Bz7d.ttf');
+}
+.Hero_Title {
+  font-size: 40px;
+  color: #dd1a1a;
+  margin-bottom: 10%;
+  font-family: 'Avengeance', 'serif';
+  text-shadow: variables.$main_shadow;
+  box-shadow: rgba(221, 26, 26, 0.4) -5px 5px, rgba(221, 26, 26, 0.3) -10px 10px,
+    rgba(221, 26, 26, 0.2) -15px 15px, rgba(221, 26, 26, 0.1) -20px 20px,
+    rgba(221, 26, 26, 0.05) -25px 25px;
+}

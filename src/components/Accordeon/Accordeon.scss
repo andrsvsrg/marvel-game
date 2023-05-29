@@ -1,0 +1,73 @@
+@use '../../helpers/variables';
+
+.AccordeonInput {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.AccordeonContainer {
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+//
+.AccordeonTab {
+  width: 100%;
+  color: variables.$white;
+  overflow: hidden;
+}
+.TabLabel {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* Icon */
+
+  &::after {
+    content: '\276F';
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+}
+.TabContent {
+  max-height: 0;
+  padding: 0 1em;
+  color: variables.$primaryRed;
+  transition: all 0.35s;
+  text-shadow: variables.$main_shadow;
+}
+
+.AccordeonInput:checked {
+  + .TabLabel {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .TabContent {
+    max-height: 67vh;
+    padding: 1em;
+  }
+}
+.FightResult {
+  text-align: center;
+  font-family: 'PT Serif', 'serif';
+  text-shadow: variables.$main_shadow;
+}
+.TeamScoreFigure {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: variables.$main_shadow;
+}
