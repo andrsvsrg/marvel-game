@@ -1,8 +1,8 @@
 {
-  "name": "marvel-heroes-game",
+  "name": "marvel-game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Siryi-Oleksandr.github.io/marvel-heroes-game/",
+  "homepage": "https://andrsvsrg.github.io/marvel-game/",
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
